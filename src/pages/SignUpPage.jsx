@@ -177,6 +177,8 @@ const SignUpPage = () => {
                                 {countries.length > 0 ? (
                                     <Select
                                         options={countryOptions}
+                                        value={formData.location}
+                                        onChange={(e) => setFormData({...formData, location: e.target.value})}
                                         placeholder="Select a country"
                                         classNames={{ positioned: "absolute", zindex: 1000 }}
                                     />
