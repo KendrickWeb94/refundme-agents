@@ -83,9 +83,10 @@ const Sidebar = () => {
                     {/* User info - only visible on larger screens */}
                     <div className="hidden lg:block text-left min-w-0">
                         <div className="font-medium text-gray-900 truncate">{user.fullName}</div>
-                        <div className="text-sm text-zinc-600">
-                            {onlineUsers.includes(user._id) ? "Online" : "Offline"}
-                        </div>
+                        <div className="font-regular text-sm text-gray-500 truncate">{user.location}</div>
+                        {/*<div className="text-sm text-zinc-600">*/}
+                        {/*    {onlineUsers.includes(user._id) ? "Online" : "Offline"}*/}
+                        {/*</div>*/}
                     </div>
                 </button>))}
                 <Link to={"/profile"} className="flex lg:flex-row flex-col gap-4 mt-4 mx-3 p-2 lg:bg-transparent bg-primary/20 items-center lg:justify-start justify-center rounded">
